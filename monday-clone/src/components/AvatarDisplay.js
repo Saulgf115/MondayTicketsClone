@@ -1,10 +1,16 @@
 import React from "react";
+import Ticket from "../pages/Ticket";
+import blankAvatar from "../images/Elden.jpg"
 
-const AvatarDisplay = () => {
+const AvatarDisplay = ({ticket}) => {
 
     return(
         <>
-            <div>AvatarDisplay</div>
+            <div className="avatar-container">
+               <div className="image-container">
+                    <img src={ticket.avatar ? ticket.avatar : blankAvatar} alt={'photo of ' + ticket.owner} /> 
+               </div>
+            </div>
         </>
     )
 
